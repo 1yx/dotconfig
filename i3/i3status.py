@@ -1,4 +1,5 @@
 from i3pystatus import Status
+import socket
 
 status=Status()
 
@@ -10,21 +11,22 @@ status.register("clock",
   format="%a %-d %b %H:%M:%S",
 )
 
-status.register("battery",
-  format="{status}/{consumption:.2f}W {percentage:.2f}% {remaining:%E%hh:%Mm}",
-  alert=True,
-  alert_percentage=5,
-  status={
-    "DIS": "↓",
-    "CHR": "↑",
-    "FULL": "=",
-  },
-  color=white,
-  full_color=white,
-  charging_color=green,
-  critical_color=red,
-  not_present_color=white,
-)
+if socket.gethostname() != "skullcanyon":
+  status.register("battery",
+    format="{status}/{consumption:.2f}W {percentage:.2f}% {remaining:%E%hh:%Mm}",
+    alert=True,
+    alert_percentage=5,
+    status={
+      "DIS": "↓",
+      "CHR": "↑",
+      "FULL": "=",
+    },
+    color=white,
+    full_color=white,
+    charging_color=green,
+    critical_color=red,
+    not_present_color=white,
+  )
 
 status.register("network",
   interface="wlp3s0",

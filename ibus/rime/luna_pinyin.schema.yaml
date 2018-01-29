@@ -5,7 +5,7 @@ custom_phrase:
   enable_sentence: false
   initial_quality: 1
   user_dict: custom_phrase
-customization: 4139795649
+customization: 3176210723
 engine:
   filters:
     - simplifier
@@ -33,6 +33,10 @@ engine:
 key_binder:
   import_preset: default
 punctuator:
+  full_shape:
+    "*": "*"
+  half_shape:
+    "*": "*"
   import_preset: symbols
 recognizer:
   import_preset: default
@@ -64,7 +68,7 @@ schema:
     
   name: "朙月拼音"
   schema_id: luna_pinyin
-  version: 0.21.custom.4139795649
+  version: 0.21.custom.3176210723
 speller:
   algebra:
     - "erase/^xx$/"

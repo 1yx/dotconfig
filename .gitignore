@@ -1,1 +1,2 @@
-ibus/rime/luna_pinyin.userdb/
+ibus/rime/*.userdb
+ibus/rime/*.bin

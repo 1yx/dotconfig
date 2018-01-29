@@ -1,3 +1,7 @@
 patch:
   punctuator/import_preset: symbols
+  punctuator/full_shape:
+    '*': '*'
+  punctuator/half_shape:
+    '*': '*'
   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'

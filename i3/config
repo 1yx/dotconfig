@@ -86,7 +86,7 @@ bindsym Mod1+f fullscreen toggle
 # bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
-bindsym Mod1+Shift+space floating toggle
+bindsym Mod1+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym Mod1+space focus mode_toggle
@@ -173,12 +173,12 @@ set $comment #999999
 set $red #f2777a
 set $orange #f99157
 set $yellow #ffcc66
-set $green #99cc99
+set $green #99cc9954
 set $aqua #66cccc
 set $blue #6699cc
 set $purple #cc99cc
 bar {
-    status_command    python ~/.config/i3/i3status.py
+    status_command    python3 ~/.config/i3/i3status.py
     colors {
         background          $background
         statusline          $foreground
